@@ -4,10 +4,468 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Devicon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+    />
+    <!-- CND AlpineJS intersect  -->
+    <script
+      defer
+      src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+    <!-- CDN AlpineJS -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <title>Meu portfolio</title>
   </head>
-  <body>
-    <h1 class="bg-red-300 uppercase text-red-900">Tailwindcss</h1>
+  <body
+    class="antialiased"
+    x-data="{'darkMode': false}"
+    x-init="darkMode = JSON.parse(localStorage.getItem('darkMode'));
+$watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)));"
+    x-data
+  >
+    <div :class="{'dark': darkMode === true}">
+      <div
+        class="box-border m-0 px-0 font-jetbrains select-none bg-graylight dark:bg-graymain py-2"
+      >
+        <div class="max-w-screen-lg mx-auto relative px-3.5">
+          <header
+            id="inicio"
+            class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 w-full bg-whitegray dark:bg-grayfundo rounded-xl z-10 mt-0 sticky top-0 min-h-altmin shadow-md"
+          >
+            <!-- Logo -->
+            <div
+              class="hidden md:flex flex-wrap items-center justify-center dark:text-white scale-125 duration-1000"
+              x-intersect="$el.classList.add('scale-100')"
+            >
+              <h1 class="text-xl font-extralight tracking-tighter">
+                Aldo Barbosa
+              </h1>
+              <span class="text-xs absolute top-10 tracking-tighter"
+                >Web Developer</span
+              >
+            </div>
+            <!-- Botões -->
+            <nav
+              class="flex flex-row w-full h-full justify-start items-center md:justify-end sm:col-span-2 md:col-span-2 text-zinc-800 opacity-0 duration-1000"
+              x-intersect="$el.classList.add('opacity-100')"
+            >
+              <a
+                href="#"
+                class="bg-graylight hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graymain mx-2 h-8 min-w-widthmin flex items-center justify-center rounded-full px-2"
+                >Início</a
+              >
+              <a
+                href="#projetos"
+                class="bg-graylight hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graymain mx-2 h-8 min-w-widthmin flex items-center justify-center rounded-full px-2"
+                >Projetos</a
+              >
+            </nav>
+            <!-- Redes sociais -->
+            <div
+              class="hidden sm:flex items-center justify-end translate-x-1/2 scale-125 duration-1000"
+              x-intersect="$el.classList.add('scale-100')"
+            >
+              <span class="text-3xl flex text-gray-600">
+                <a href="https://github.com/metaclep" target="_blank" class="">
+                  <i
+                    class="fab fa-github dark:text-white hover:scale-125 duration-300 mr-3"
+                  ></i>
+                </a>
+                <a href="#" target="_blank" class="">
+                  <i
+                    class="fab fa-linkedin-in dark:text-white hover:scale-125 duration-300 mr-3"
+                  ></i>
+                </a>
+                <a href="#" target="_blank" class="">
+                  <i
+                    class="fab fa-instagram dark:text-white hover:scale-125 duration-300 mr-3"
+                  ></i>
+                </a>
+                <a href="#" target="_blank" class="">
+                  <i
+                    class="fab fa-facebook dark:text-white hover:scale-125 duration-300"
+                  ></i>
+                </a>
+              </span>
+            </div>
+
+            <!-- Toggle -->
+            <div
+              class="flex justify-end items-center mr-3 opacity-0 duration-1000"
+              x-intersect="$el.classList.add('opacity-100')"
+            >
+              <label
+                for="toggle"
+                class="w-14 h-7 flex items-center bg-graylight hover:bg-gray-300 dark:bg-flutuante dark:hover:bg-gray-600 rounded-full p-1 cursor-pointer duration-300 ease-in-out justify-between"
+              >
+                <i class="fas fa-sun text-lg text-yellow-400"></i>
+                <i class="fas fa-moon text-gray-700"></i>
+                <div
+                  class="toggle-dot bg-white w-5 h-5 rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-7 absolute"
+                ></div>
+              </label>
+              <input
+                id="toggle"
+                type="checkbox"
+                class="hidden"
+                :value="darkMode"
+                @change="darkMode = !darkMode"
+              />
+            </div>
+          </header>
+          <!-- Perfil -->
+          <section
+            class="bg-whitegray dark:bg-grayfundo text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+          >
+            <h2
+              class="bg-whitegray dark:bg-flutuante dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+            >
+              Sobre mim
+            </h2>
+            <div
+              class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
+            >
+              <img
+                src="img/foto_perfil2.png"
+                alt="foto-perfil"
+                class="max-w-240px max-h-240px rounded-full h-auto md:mr-7 hover:scale-105 scale-125 duration-1000 opacity-0"
+                x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+              />
+              <div
+                class="text-zinc-700 dark:text-white opacity-0 duration-1000 -translate-y-full z-5"
+                x-intersect="$el.classList.add('opacity-100', '-translate-y-0')"
+                x-data="{isShowing : false}"
+              >
+                <span class="font-extralight">Oi, meu nome é</span>
+                <h1 class="font-bold text-4xl">Aldo Barbosa</h1>
+                <p class="font-light tracking-tighter leading-5 mt-2.5">
+                  Eu sou estudante do curso de ciências da computação e
+                  desenvolvedor web. Tenho habilidades em variedades de
+                  tecnologias, linguages de programação e frameworks.
+                  Especialmente HTML 5, CSS, Bootstrap, Tailwind CSS e
+                  JavaScript.
+                </p>
+                <div class="flex justify-center md:justify-start mt-7">
+                  <a
+                    href="#"
+                    class="uppercase max-w-144px bg-graylight text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graymain mx-2 h-10 min-w-widthmin flex justify-center items-center rounded-full px-2.5 w-full"
+                    >Contato <i class="ml-2 far fa-paper-plane"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="uppercase max-w-144px bg-graylight text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graymain mx-2 h-10 min-w-widthmin flex justify-center items-center rounded-full px-2.5 w-full"
+                    x-on:click="isShowing = !isShowing"
+                    >currículo <i class="ml-2 far fa-file-pdf"></i
+                  ></a>
+                </div>
+                <div
+                  class="bg-graylight dark:bg-graymain w-full h-full rounded-lg my-4 px-2 flex flex-col"
+                  x-show="isShowing"
+                >
+                  <span class=""
+                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ullam excepturi dignissimos quos tempore eligendi modi illo
+                    ex perspiciatis. Rerum voluptas tempore eveniet nobis magni
+                    optio similique inventore ipsam quod officia?</span
+                  >
+                  <a href="#" class="">
+                    <i class="fas fa-file-pdf text-lg">Download</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Habilidades -->
+          <section
+            class="bg-whitegray dark:bg-grayfundo text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+          >
+            <h2
+              class="bg-whitegray dark:bg-flutuante dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+            >
+              Ferramentas front-end
+            </h2>
+
+            <ul
+              class="grid grid-row-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8"
+            >
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-javascript-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >javascript</span
+                >
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-typescript-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >typescript</span
+                >
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-react-original colored text-6xl scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >react</span
+                >
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-tailwindcss-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >tailwind css</span
+                >
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-html5-plain text-6xl text-red-600 scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >html 5</span
+                >
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-css3-plain text-6xl text-blue-600 scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >css3</span
+                >
+              </li>
+            </ul>
+          </section>
+
+          <!-- Devtools -->
+          <section
+            class="bg-whitegray dark:bg-grayfundo text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+          >
+            <h2
+              class="bg-whitegray dark:bg-flutuante dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+            >
+              Ferramentas de desenvolvimento
+            </h2>
+
+            <ul
+              class="grid grid-row-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8"
+            >
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-git-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >git</span
+                >
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-github-original text-6xl scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >github</span
+                >
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-vscode-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >vscode</span
+                >
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-heroku-original colored text-6xl scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >heroku</span
+                >
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-npm-original-wordmark colored text-6xl scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >npm</span
+                >
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <i
+                  class="devicon-chrome-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >chrome devtools</span
+                >
+              </li>
+            </ul>
+          </section>
+
+          <!-- Projetos -->
+          <section
+            id="projetos"
+            class="bg-whitegray dark:bg-grayfundo text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+          >
+            <h2
+              class="bg-whitegray dark:bg-flutuante dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+            >
+              Projetos
+            </h2>
+
+            <ul
+              class="grid grid-row-1 sm:grid-cols-2 gap-5 md:gap-10 scale-125 opacity-0 duration-1000"
+              x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+            >
+              <li
+                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <img
+                  src="img/projeto-1.png"
+                  alt="projeto-1"
+                  class="w-full rounded-t-lg"
+                />
+                <a
+                  href="#"
+                  class="flex flex-col justify-center items-center mt-1.5"
+                >
+                  <i class="devicon-github-original text-4xl"></i>
+                  <span class="font-semibold">Source</span>
+                </a>
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 duration-300"
+              >
+                <img
+                  src="img/projeto-2.png"
+                  alt="projeto-2"
+                  class="w-full rounded-t-lg"
+                />
+                <a
+                  href="#"
+                  class="flex flex-col justify-center items-center mt-1.5"
+                >
+                  <i class="devicon-github-original text-4xl"></i>
+                  <span class="font-semibold">Source</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Footer -->
+          <footer
+            class="flex flex-col items-center justify-center bg-whitegray dark:bg-grayfundo rounded-xl py-4 px-4 mb-0 mt-7 relative shadow-md"
+          >
+            <h1
+              class="hidden sm:block text-zinc-800 dark:text-white text-md tracking-tighter font-extralight -translate-y-full opacity-0 duration-1000"
+              x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+            >
+              Criado por Aldo Barbosa.
+            </h1>
+
+            <div
+              class="sm:hidden flex items-center justify-center -translate-y-full opacity-0 duration-1000"
+              x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+            >
+              <span class="text-2xl flex text-gray-600">
+                <a href="https://github.com/metaclep" target="_blank" class="">
+                  <i
+                    class="fab fa-github dark:text-white hover:scale-125 duration-300 mr-5"
+                  ></i>
+                </a>
+                <a href="#" target="_blank" class="">
+                  <i
+                    class="fab fa-linkedin-in dark:text-white hover:scale-125 duration-300 mr-5"
+                  ></i>
+                </a>
+                <a href="#" target="_blank" class="">
+                  <i
+                    class="fab fa-instagram dark:text-white hover:scale-125 duration-300 mr-5"
+                  ></i>
+                </a>
+                <a href="#" target="_blank" class="">
+                  <i
+                    class="fab fa-facebook dark:text-white hover:scale-125 duration-300"
+                  ></i>
+                </a>
+              </span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/6c32633a00.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
