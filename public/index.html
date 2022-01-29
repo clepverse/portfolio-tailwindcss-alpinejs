@@ -11,6 +11,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
     />
+    <!-- CND AlpineJS Collapse -->
+    <script
+      defer
+      src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
+    ></script>
     <!-- CND AlpineJS intersect  -->
     <script
       defer
@@ -168,6 +173,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 <div
                   class="bg-graylight dark:bg-graymain w-full h-full rounded-lg my-4 px-2 flex flex-col"
                   x-show="isShowing"
+                  x-collapse.duration.500ms
                 >
                   <span class=""
                     >Lorem ipsum dolor sit amet consectetur adipisicing elit.
