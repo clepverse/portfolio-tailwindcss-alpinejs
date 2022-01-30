@@ -26,7 +26,7 @@
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
-    <title>Meu portfolio</title>
+    <title>Aldo Developer - Portfolio</title>
   </head>
   <body
     class="antialiased"
@@ -138,7 +138,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
               class="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
             >
               <img
-                src="img/foto_perfil2.png"
+                src="img/foto_perfil.png"
                 alt="foto-perfil"
                 class="max-w-240px max-h-240px rounded-full h-auto md:mr-7 hover:scale-105 scale-125 duration-1000 opacity-0"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
@@ -151,15 +151,18 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 <span class="font-extralight">Oi, meu nome é</span>
                 <h1 class="font-bold text-4xl">Aldo Barbosa</h1>
                 <p class="font-light tracking-tighter leading-5 mt-2.5">
-                  Eu sou estudante do curso de ciências da computação e
-                  desenvolvedor web. Tenho habilidades em variedades de
-                  tecnologias, linguages de programação e frameworks.
-                  Especialmente HTML 5, CSS, Bootstrap, Tailwind CSS e
-                  JavaScript.
+                  Eu sou estudante do curso de ciências da computação em
+                  Pernambuco e pretendo me tornar desenvolvedor web fullstack.
+                  Atualmente, tenho habilidades em varias tecnologias, linguages
+                  de programação e frameworks, especialmente HTML 5, CSS, SCSS,
+                  TAILWIND CSS, JAVASCRIPT e ALPINEJS. Estou iniciando meus
+                  estudos em REACT, NEXTJS, REDUX e em breve entrarei nas
+                  tecnologias back-end.
                 </p>
                 <div class="flex justify-center md:justify-start mt-7">
                   <a
-                    href="#"
+                    href="https://mail.google.com/mail/u/0/?fs=1&to=aldo.clep@gmail.com&tf=cm"
+                    target="_blank"
                     class="uppercase max-w-144px bg-graylight text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graymain mx-2 h-10 min-w-widthmin flex justify-center items-center rounded-full px-2.5 w-full"
                     >Contato <i class="ml-2 far fa-paper-plane"></i
                   ></a>
@@ -231,13 +234,13 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
-                  class="devicon-react-original colored text-6xl scale-125 opacity-0 duration-1000"
+                  class="devicon-html5-plain text-6xl text-red-600 scale-125 opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
                   class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
-                  >react</span
+                  >html 5</span
                 >
               </li>
               <li
@@ -257,26 +260,13 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
-                  class="devicon-html5-plain text-6xl text-red-600 scale-125 opacity-0 duration-1000"
+                  class="devicon-sass-original colored text-6xl scale-125 opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
                   class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
-                  >html 5</span
-                >
-              </li>
-              <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
-              >
-                <i
-                  class="devicon-css3-plain text-6xl text-blue-600 scale-125 opacity-0 duration-1000"
-                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
-                ></i>
-                <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
-                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
-                  >css3</span
+                  >sass</span
                 >
               </li>
             </ul>
@@ -338,19 +328,6 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
-                  class="devicon-heroku-original colored text-6xl scale-125 opacity-0 duration-1000"
-                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
-                ></i>
-                <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
-                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
-                  >heroku</span
-                >
-              </li>
-              <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
-              >
-                <i
                   class="devicon-npm-original-wordmark colored text-6xl scale-125 opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
@@ -387,20 +364,27 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
               Projetos
             </h2>
 
-            <ul
-              class="grid grid-row-1 sm:grid-cols-2 gap-5 md:gap-10 scale-125 opacity-0 duration-1000"
-              x-intersect="$el.classList.add('scale-100', 'opacity-100')"
-            >
+            <ul class="grid grid-row-1 sm:grid-cols-2 gap-5 md:gap-10">
               <li
-                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-1.png"
                   alt="projeto-1"
                   class="w-full rounded-t-lg"
                 />
+                <div
+                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                >
+                  <span class="bg-sky-600 rounded-lg px-2">html</span>
+                  <span class="bg-sky-600 rounded-lg px-2">tailwind</span>
+                  <span class="bg-sky-600 rounded-lg px-2">alpinejs</span>
+                </div>
+
                 <a
-                  href="#"
+                  href="https://github.com/metaclep/dark-mode-animacoes-com-tailwindcss-alpinejs"
+                  target="_blank"
                   class="flex flex-col justify-center items-center mt-1.5"
                 >
                   <i class="devicon-github-original text-4xl"></i>
@@ -408,15 +392,119 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 </a>
               </li>
               <li
-                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-2.png"
                   alt="projeto-2"
                   class="w-full rounded-t-lg"
                 />
+                <div
+                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                >
+                  <span class="bg-sky-600 rounded-lg px-2">html</span>
+                  <span class="bg-sky-600 rounded-lg px-2">tailwind</span>
+                </div>
                 <a
-                  href="#"
+                  href="https://github.com/metaclep/spotify-clone-com-tailwindcss"
+                  target="_blank"
+                  class="flex flex-col justify-center items-center mt-1.5"
+                >
+                  <i class="devicon-github-original text-4xl"></i>
+                  <span class="font-semibold">Source</span>
+                </a>
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+              >
+                <img
+                  src="img/projeto-3.png"
+                  alt="projeto-2"
+                  class="w-full rounded-t-lg"
+                />
+                <div
+                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                >
+                  <span class="bg-sky-600 rounded-lg px-2">html</span>
+                  <span class="bg-sky-600 rounded-lg px-2">tailwind</span>
+                </div>
+                <a
+                  href="https://github.com/metaclep/facebook-login-clone-tailwindcss"
+                  target="_blank"
+                  class="flex flex-col justify-center items-center mt-1.5"
+                >
+                  <i class="devicon-github-original text-4xl"></i>
+                  <span class="font-semibold">Source</span>
+                </a>
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+              >
+                <img
+                  src="img/projeto-4.png"
+                  alt="projeto-2"
+                  class="w-full rounded-t-lg"
+                />
+                <div
+                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                >
+                  <span class="bg-sky-600 rounded-lg px-2">html</span>
+                  <span class="bg-sky-600 rounded-lg px-2">tailwind</span>
+                </div>
+                <a
+                  href="https://github.com/metaclep/amazon-home-clone-tailwind-css"
+                  target="_blank"
+                  class="flex flex-col justify-center items-center mt-1.5"
+                >
+                  <i class="devicon-github-original text-4xl"></i>
+                  <span class="font-semibold">Source</span>
+                </a>
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+              >
+                <img
+                  src="img/projeto-5.png"
+                  alt="projeto-2"
+                  class="w-full rounded-t-lg"
+                />
+                <div
+                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                >
+                  <span class="bg-sky-600 rounded-lg px-2">html</span>
+                  <span class="bg-sky-600 rounded-lg px-2">css</span>
+                </div>
+                <a
+                  href="https://github.com/metaclep/netflix-home-clone"
+                  target="_blank"
+                  class="flex flex-col justify-center items-center mt-1.5"
+                >
+                  <i class="devicon-github-original text-4xl"></i>
+                  <span class="font-semibold">Source</span>
+                </a>
+              </li>
+              <li
+                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+              >
+                <img
+                  src="img/projeto-6.png"
+                  alt="projeto-2"
+                  class="w-full rounded-t-lg"
+                />
+                <div
+                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                >
+                  <span class="bg-sky-600 rounded-lg px-2">html</span>
+                  <span class="bg-sky-600 rounded-lg px-2">css mobile</span>
+                </div>
+                <a
+                  href="https://github.com/metaclep/tinder-clone"
+                  target="_blank"
                   class="flex flex-col justify-center items-center mt-1.5"
                 >
                   <i class="devicon-github-original text-4xl"></i>
