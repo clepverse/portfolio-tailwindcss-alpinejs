@@ -26,6 +26,11 @@
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
     <title>Aldo Developer - Portfolio</title>
   </head>
   <body
@@ -37,12 +42,12 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
   >
     <div :class="{'dark': darkMode === true}">
       <div
-        class="box-border m-0 px-0 font-jetbrains select-none bg-graylight dark:bg-graymain py-2"
+        class="box-border m-0 px-0 font-jetbrains select-none bg-graybg dark:bg-graydarkbg py-2"
       >
         <div class="max-w-screen-lg mx-auto relative px-3.5">
           <header
             id="inicio"
-            class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 w-full bg-whitegray dark:bg-grayfundo rounded-xl z-10 mt-0 sticky top-0 min-h-altmin shadow-md"
+            class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 w-full bg-whiteprimary dark:bg-grayprimary rounded-xl z-10 mt-0 sticky top-0 min-h-altmin shadow-md"
           >
             <!-- Logo -->
             <div
@@ -63,12 +68,12 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
             >
               <a
                 href="#"
-                class="bg-graylight hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graymain mx-2 h-8 min-w-widthmin flex items-center justify-center rounded-full px-2"
+                class="bg-graybg hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graydarkbg mx-2 h-8 min-w-widthmin flex items-center justify-center rounded-full px-2"
                 >Início</a
               >
               <a
                 href="#projetos"
-                class="bg-graylight hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graymain mx-2 h-8 min-w-widthmin flex items-center justify-center rounded-full px-2"
+                class="bg-graybg hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graydarkbg mx-2 h-8 min-w-widthmin flex items-center justify-center rounded-full px-2"
                 >Projetos</a
               >
             </nav>
@@ -93,7 +98,11 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                     class="fab fa-instagram dark:text-white hover:scale-125 duration-300 mr-3"
                   ></i>
                 </a>
-                <a href="#" target="_blank" class="">
+                <a
+                  href="https://www.facebook.com/aldo.clep1"
+                  target="_blank"
+                  class=""
+                >
                   <i
                     class="fab fa-facebook dark:text-white hover:scale-125 duration-300"
                   ></i>
@@ -108,7 +117,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
             >
               <label
                 for="toggle"
-                class="w-14 h-7 flex items-center bg-graylight hover:bg-gray-300 dark:bg-flutuante dark:hover:bg-gray-600 rounded-full p-1 cursor-pointer duration-300 ease-in-out justify-between"
+                class="w-14 h-7 flex items-center bg-graybg hover:bg-gray-300 dark:bg-titlecard dark:hover:bg-gray-600 rounded-full p-1 cursor-pointer duration-300 ease-in-out justify-between"
               >
                 <i class="fas fa-sun text-lg text-yellow-400"></i>
                 <i class="fas fa-moon text-gray-700"></i>
@@ -127,10 +136,11 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
           </header>
           <!-- Perfil -->
           <section
-            class="bg-whitegray dark:bg-grayfundo text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+            class="bg-whiteprimary dark:bg-grayprimary text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+            x-data="{isShowing : false}"
           >
             <h2
-              class="bg-whitegray dark:bg-flutuante dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+              class="bg-whiteprimary dark:bg-titlecard dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
             >
               Sobre mim
             </h2>
@@ -146,7 +156,6 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
               <div
                 class="text-zinc-700 dark:text-white opacity-0 duration-1000 -translate-y-full z-5"
                 x-intersect="$el.classList.add('opacity-100', '-translate-y-0')"
-                x-data="{isShowing : false}"
               >
                 <span class="font-extralight">Oi, meu nome é</span>
                 <h1 class="font-bold text-4xl">Aldo Barbosa</h1>
@@ -163,40 +172,44 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                   <a
                     href="https://mail.google.com/mail/u/0/?fs=1&to=aldo.clep@gmail.com&tf=cm"
                     target="_blank"
-                    class="uppercase max-w-144px bg-graylight text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graymain mx-2 h-10 min-w-widthmin flex justify-center items-center rounded-full px-2.5 w-full"
+                    class="uppercase max-w-144px bg-graybg text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graydarkbg mx-2 h-10 min-w-widthmin flex justify-center items-center rounded-full px-2.5 w-full"
                     >Contato <i class="ml-2 far fa-paper-plane"></i
                   ></a>
                   <a
-                    href="#"
-                    class="uppercase max-w-144px bg-graylight text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graymain mx-2 h-10 min-w-widthmin flex justify-center items-center rounded-full px-2.5 w-full"
-                    x-on:click="isShowing = !isShowing"
-                    >currículo <i class="ml-2 far fa-file-pdf"></i
+                    href=""
+                    class="uppercase max-w-144px bg-graybg text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graydarkbg mx-2 h-10 min-w-widthmin flex justify-center items-center rounded-full px-2.5 w-full"
+                    x-on:click.prevent="isShowing = !isShowing"
+                    >currículo <i class="ml-2 fas fa-address-card"></i
                   ></a>
                 </div>
-                <div
-                  class="bg-graylight dark:bg-graymain w-full h-full rounded-lg my-4 px-2 flex flex-col"
-                  x-show="isShowing"
-                  x-collapse.duration.500ms
-                >
-                  <span class=""
-                    >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ullam excepturi dignissimos quos tempore eligendi modi illo
-                    ex perspiciatis. Rerum voluptas tempore eveniet nobis magni
-                    optio similique inventore ipsam quod officia?</span
-                  >
-                  <a href="#" class="">
-                    <i class="fas fa-file-pdf text-lg">Download</i>
-                  </a>
-                </div>
+              </div>
+            </div>
+            <div
+              class="bg-graybg dark:bg-graydarkbg w-full h-full rounded-lg my-4 px-2 flex flex-col"
+              x-show="isShowing"
+              x-collapse.duration.500ms
+              x-cloak
+            >
+              <div class="prose dark:prose-invert">
+                <h1 class="">Currículo</h1>
+                <p class="">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                  excepturi dignissimos quos tempore eligendi modi illo ex
+                  perspiciatis. Rerum voluptas tempore eveniet nobis magni optio
+                  similique inventore ipsam quod officia?
+                </p>
+                <a href="#" class="my-2">
+                  <i class="fas fa-file-pdf text-lg"> Baixar PDF</i>
+                </a>
               </div>
             </div>
           </section>
           <!-- Habilidades -->
           <section
-            class="bg-whitegray dark:bg-grayfundo text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+            class="bg-whiteprimary dark:bg-grayprimary text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
           >
             <h2
-              class="bg-whitegray dark:bg-flutuante dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+              class="bg-whiteprimary dark:bg-titlecard dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
             >
               Ferramentas front-end
             </h2>
@@ -205,7 +218,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
               class="grid grid-row-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8"
             >
               <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
                   class="devicon-javascript-plain colored text-6xl scale-125 opacity-0 duration-1000"
@@ -218,7 +231,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 >
               </li>
               <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
                   class="devicon-typescript-plain colored text-6xl scale-125 opacity-0 duration-1000"
@@ -231,7 +244,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 >
               </li>
               <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
                   class="devicon-html5-plain text-6xl text-red-600 scale-125 opacity-0 duration-1000"
@@ -244,7 +257,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 >
               </li>
               <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
                   class="devicon-tailwindcss-plain colored text-6xl scale-125 opacity-0 duration-1000"
@@ -257,7 +270,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 >
               </li>
               <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
                   class="devicon-sass-original colored text-6xl scale-125 opacity-0 duration-1000"
@@ -274,10 +287,10 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
 
           <!-- Devtools -->
           <section
-            class="bg-whitegray dark:bg-grayfundo text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+            class="bg-whiteprimary dark:bg-grayprimary text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
           >
             <h2
-              class="bg-whitegray dark:bg-flutuante dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+              class="bg-whiteprimary dark:bg-titlecard dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
             >
               Ferramentas de desenvolvimento
             </h2>
@@ -286,7 +299,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
               class="grid grid-row-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8"
             >
               <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
                   class="devicon-git-plain colored text-6xl scale-125 opacity-0 duration-1000"
@@ -299,7 +312,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 >
               </li>
               <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
                   class="devicon-github-original text-6xl scale-125 opacity-0 duration-1000"
@@ -312,7 +325,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 >
               </li>
               <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
                   class="devicon-vscode-plain colored text-6xl scale-125 opacity-0 duration-1000"
@@ -325,7 +338,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 >
               </li>
               <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
                   class="devicon-npm-original-wordmark colored text-6xl scale-125 opacity-0 duration-1000"
@@ -338,7 +351,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 >
               </li>
               <li
-                class="bg-graylight dark:bg-graymain dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
               >
                 <i
                   class="devicon-chrome-plain colored text-6xl scale-125 opacity-0 duration-1000"
@@ -356,23 +369,23 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
           <!-- Projetos -->
           <section
             id="projetos"
-            class="bg-whitegray dark:bg-grayfundo text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+            class="bg-whiteprimary dark:bg-grayprimary text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
           >
             <h2
-              class="bg-whitegray dark:bg-flutuante dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+              class="bg-whiteprimary dark:bg-titlecard dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
             >
               Projetos
             </h2>
 
             <ul class="grid grid-row-1 sm:grid-cols-2 gap-5 md:gap-10">
               <li
-                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-1.png"
                   alt="projeto-1"
-                  class="w-full rounded-t-lg"
+                  class="w-full h-full rounded-t-lg"
                 />
                 <div
                   class="flex flex-row justify-center items-center space-x-4 my-2"
@@ -392,13 +405,13 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 </a>
               </li>
               <li
-                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-2.png"
                   alt="projeto-2"
-                  class="w-full rounded-t-lg"
+                  class="w-full h-full rounded-t-lg"
                 />
                 <div
                   class="flex flex-row justify-center items-center space-x-4 my-2"
@@ -416,13 +429,13 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 </a>
               </li>
               <li
-                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-3.png"
                   alt="projeto-2"
-                  class="w-full rounded-t-lg"
+                  class="w-full h-full rounded-t-lg"
                 />
                 <div
                   class="flex flex-row justify-center items-center space-x-4 my-2"
@@ -440,13 +453,13 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 </a>
               </li>
               <li
-                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-4.png"
                   alt="projeto-2"
-                  class="w-full rounded-t-lg"
+                  class="w-full h-full rounded-t-lg"
                 />
                 <div
                   class="flex flex-row justify-center items-center space-x-4 my-2"
@@ -464,13 +477,13 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 </a>
               </li>
               <li
-                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-5.png"
                   alt="projeto-2"
-                  class="w-full rounded-t-lg"
+                  class="w-full h-full rounded-t-lg"
                 />
                 <div
                   class="flex flex-row justify-center items-center space-x-4 my-2"
@@ -488,13 +501,13 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 </a>
               </li>
               <li
-                class="bg-graylight dark:bg-graymain text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-6.png"
                   alt="projeto-2"
-                  class="w-full rounded-t-lg"
+                  class="w-full h-full rounded-t-lg"
                 />
                 <div
                   class="flex flex-row justify-center items-center space-x-4 my-2"
@@ -516,7 +529,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
 
           <!-- Footer -->
           <footer
-            class="flex flex-col items-center justify-center bg-whitegray dark:bg-grayfundo rounded-xl py-4 px-4 mb-0 mt-7 relative shadow-md"
+            class="flex flex-col items-center justify-center bg-whiteprimary dark:bg-grayprimary rounded-xl py-4 px-4 mb-0 mt-7 relative shadow-md"
           >
             <h1
               class="hidden sm:block text-zinc-800 dark:text-white text-md tracking-tighter font-extralight -translate-y-full opacity-0 duration-1000"
@@ -545,7 +558,11 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                     class="fab fa-instagram dark:text-white hover:scale-125 duration-300 mr-5"
                   ></i>
                 </a>
-                <a href="#" target="_blank" class="">
+                <a
+                  href="https://www.facebook.com/aldo.clep1"
+                  target="_blank"
+                  class=""
+                >
                   <i
                     class="fab fa-facebook dark:text-white hover:scale-125 duration-300"
                   ></i>
