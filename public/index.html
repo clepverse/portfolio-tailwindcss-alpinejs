@@ -42,50 +42,50 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
   >
     <div :class="{'dark': darkMode === true}">
       <div
-        class="box-border m-0 px-0 font-jetbrains select-none bg-graybg dark:bg-graydarkbg py-2"
+        class="m-0 box-border select-none bg-graybg px-0 py-2 font-jetbrains dark:bg-graydarkbg"
       >
-        <div class="max-w-screen-lg mx-auto relative px-3.5">
+        <div class="relative mx-auto max-w-screen-lg px-3.5">
           <header
             id="inicio"
-            class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 w-full bg-whiteprimary dark:bg-grayprimary rounded-xl z-10 mt-0 sticky top-0 min-h-altmin shadow-md"
+            class="sticky top-0 z-10 mt-0 grid min-h-altmin w-full grid-cols-2 rounded-xl bg-whiteprimary shadow-md dark:bg-grayprimary sm:grid-cols-4 md:grid-cols-5"
           >
             <!-- Logo -->
             <div
-              class="hidden md:flex flex-wrap items-center justify-center dark:text-white scale-125 duration-1000"
+              class="hidden scale-125 flex-wrap items-center justify-center duration-1000 dark:text-white md:flex"
               x-intersect="$el.classList.add('scale-100')"
             >
               <h1 class="text-xl font-extralight tracking-tighter">
                 Aldo Barbosa
               </h1>
-              <span class="text-xs absolute top-10 tracking-tighter"
+              <span class="absolute top-10 text-xs tracking-tighter"
                 >Web Developer</span
               >
             </div>
             <!-- Botões -->
             <nav
-              class="flex flex-row w-full h-full justify-start items-center md:justify-end sm:col-span-2 md:col-span-2 text-zinc-800 opacity-0 duration-1000"
+              class="flex h-full w-full flex-row items-center justify-start text-zinc-800 opacity-0 duration-1000 sm:col-span-2 md:col-span-2 md:justify-end"
               x-intersect="$el.classList.add('opacity-100')"
             >
               <a
                 href="#"
-                class="bg-graybg hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graydarkbg mx-2 h-8 min-w-widthmin flex items-center justify-center rounded-full px-2"
+                class="mx-2 flex h-8 min-w-widthmin items-center justify-center rounded-full bg-graybg px-2 hover:bg-slate-400 hover:text-zinc-900 dark:bg-graydarkbg dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-300"
                 >Início</a
               >
               <a
                 href="#projetos"
-                class="bg-graybg hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graydarkbg mx-2 h-8 min-w-widthmin flex items-center justify-center rounded-full px-2"
+                class="mx-2 flex h-8 min-w-widthmin items-center justify-center rounded-full bg-graybg px-2 hover:bg-slate-400 hover:text-zinc-900 dark:bg-graydarkbg dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-300"
                 >Projetos</a
               >
             </nav>
             <!-- Redes sociais -->
             <div
-              class="hidden sm:flex items-center justify-end translate-x-1/2 scale-125 duration-1000"
+              class="hidden translate-x-1/2 scale-125 items-center justify-end duration-1000 sm:flex"
               x-intersect="$el.classList.add('scale-100')"
             >
-              <span class="text-3xl flex text-gray-600">
+              <span class="flex text-3xl text-gray-600">
                 <a href="https://github.com/metaclep" target="_blank" class="">
                   <i
-                    class="fab fa-github dark:text-white hover:scale-125 duration-300 mr-3"
+                    class="fab fa-github mr-3 duration-300 hover:scale-125 dark:text-white"
                   ></i>
                 </a>
                 <a
@@ -94,12 +94,16 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                   class=""
                 >
                   <i
-                    class="fab fa-linkedin-in dark:text-white hover:scale-125 duration-300 mr-3"
+                    class="fab fa-linkedin-in mr-3 duration-300 hover:scale-125 dark:text-white"
                   ></i>
                 </a>
-                <a href="#" target="_blank" class="">
+                <a
+                  href="https://www.instagram.com/aldo.mgg/"
+                  target="_blank"
+                  class=""
+                >
                   <i
-                    class="fab fa-instagram dark:text-white hover:scale-125 duration-300 mr-3"
+                    class="fab fa-instagram mr-3 duration-300 hover:scale-125 dark:text-white"
                   ></i>
                 </a>
                 <a
@@ -108,7 +112,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                   class=""
                 >
                   <i
-                    class="fab fa-facebook dark:text-white hover:scale-125 duration-300"
+                    class="fab fa-facebook duration-300 hover:scale-125 dark:text-white"
                   ></i>
                 </a>
               </span>
@@ -116,17 +120,17 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
 
             <!-- Toggle -->
             <div
-              class="flex justify-end items-center mr-3 opacity-0 duration-1000"
+              class="mr-3 flex items-center justify-end opacity-0 duration-1000"
               x-intersect="$el.classList.add('opacity-100')"
             >
               <label
                 for="toggle"
-                class="w-14 h-7 flex items-center bg-graybg hover:bg-gray-300 dark:bg-titlecard dark:hover:bg-gray-600 rounded-full p-1 cursor-pointer duration-300 ease-in-out justify-between"
+                class="flex h-7 w-14 cursor-pointer items-center justify-between rounded-full bg-graybg p-1 duration-300 ease-in-out hover:bg-gray-300 dark:bg-titlecard dark:hover:bg-gray-600"
               >
                 <i class="fas fa-sun text-lg text-yellow-400"></i>
                 <i class="fas fa-moon text-gray-700"></i>
                 <div
-                  class="toggle-dot bg-white w-5 h-5 rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-7 absolute"
+                  class="toggle-dot absolute h-5 w-5 transform rounded-full bg-white shadow-md duration-300 ease-in-out dark:translate-x-7"
                 ></div>
               </label>
               <input
@@ -140,11 +144,11 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
           </header>
           <!-- Perfil -->
           <section
-            class="bg-whiteprimary dark:bg-grayprimary text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+            class="relative mt-7 rounded-xl bg-whiteprimary p-11 text-zinc-800 shadow-md dark:bg-grayprimary"
             x-data="{isShowing : false}"
           >
             <h2
-              class="bg-whiteprimary dark:bg-titlecard dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+              class="absolute -top-3.5 left-1/2 z-5 translate-x-50menos rounded-lg bg-whiteprimary py-1 px-2 text-sm opacity-75 shadow-sm dark:bg-titlecard dark:text-white md:left-[80px] md:translate-x-0 md:text-left"
             >
               Sobre mim
             </h2>
@@ -154,54 +158,49 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
               <img
                 src="img/foto_perfil.png"
                 alt="foto-perfil"
-                class="max-w-240px max-h-240px rounded-full h-auto md:mr-7 hover:scale-105 scale-125 duration-1000 opacity-0"
+                class="h-auto max-h-240px max-w-240px scale-125 rounded-full opacity-0 duration-1000 hover:scale-105 md:mr-7"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               />
               <div
-                class="text-zinc-700 dark:text-white opacity-0 duration-1000 -translate-y-full z-5"
+                class="z-5 -translate-y-full text-zinc-700 opacity-0 duration-1000 dark:text-white"
                 x-intersect="$el.classList.add('opacity-100', '-translate-y-0')"
               >
                 <span class="font-extralight">Oi, meu nome é</span>
-                <h1 class="font-bold text-4xl">Aldo Barbosa</h1>
-                <p class="font-light tracking-tighter leading-5 mt-2.5">
+                <h1 class="text-4xl font-bold">Aldo Barbosa</h1>
+                <p class="mt-2.5 font-light leading-5 tracking-tighter">
                   Sou estudante do curso de ciências da computação no estado de
                   Pernambuco. Sou desenvolvedor web em busca do fullstack.
                   Atualmente, tenho habilidades em varias tecnologias, linguages
-                  de programação e frameworks, especialmente HTML 5, CSS, SCSS,
-                  TAILWIND CSS, JAVASCRIPT e ALPINEJS. Estou iniciando meus
-                  estudos em REACT, NEXTJS, REDUX e em breve entrarei nas
+                  de programação e frameworks, especialmente HTML semâtico, CSS,
+                  SCSS, Tailwind CSS, Javascript, ReactJS e AlpineJS. Estou
+                  estudando Typescript, Redux e NextJS, e em breve entrarei nas
                   tecnologias back-end.
                 </p>
-                <div class="flex justify-center md:justify-start mt-7">
+                <div class="mt-7 flex justify-center md:justify-start">
                   <a
                     href="https://mail.google.com/mail/u/0/?fs=1&to=aldo.clep@gmail.com&tf=cm"
                     target="_blank"
-                    class="uppercase max-w-144px bg-graybg text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graydarkbg mx-2 h-10 min-w-widthmin flex justify-center items-center rounded-full px-2.5 w-full"
-                    >Contato <i class="ml-2 far fa-paper-plane"></i
+                    class="mx-2 flex h-10 w-full min-w-widthmin max-w-144px items-center justify-center rounded-full bg-graybg px-2.5 uppercase text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:bg-graydarkbg dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                    >Contato <i class="far fa-paper-plane ml-2"></i
                   ></a>
                   <a
                     href=""
-                    class="uppercase max-w-144px bg-graybg text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:hover:text-gray-300 dark:text-white dark:hover:bg-gray-700 dark:bg-graydarkbg mx-2 h-10 min-w-widthmin flex justify-center items-center rounded-full px-2.5 w-full"
+                    class="mx-2 flex h-10 w-full min-w-widthmin max-w-144px items-center justify-center rounded-full bg-graybg px-2.5 uppercase text-zinc-700 hover:bg-slate-400 hover:text-zinc-900 dark:bg-graydarkbg dark:text-white dark:hover:bg-gray-700 dark:hover:text-gray-300"
                     x-on:click.prevent="isShowing = !isShowing"
-                    >currículo <i class="ml-2 fas fa-address-card"></i
+                    >currículo <i class="fas fa-address-card ml-2"></i
                   ></a>
                 </div>
               </div>
             </div>
             <div
-              class="bg-graybg dark:bg-graydarkbg w-full h-full rounded-lg my-4 px-2 flex flex-col"
+              class="my-4 flex h-full w-full flex-col rounded-lg bg-graybg px-2 dark:bg-graydarkbg"
               x-show="isShowing"
               x-collapse.duration.500ms
               x-cloak
             >
               <div class="prose dark:prose-invert">
                 <h1 class="">Currículo</h1>
-                <p class="">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                  excepturi dignissimos quos tempore eligendi modi illo ex
-                  perspiciatis. Rerum voluptas tempore eveniet nobis magni optio
-                  similique inventore ipsam quod officia?
-                </p>
+                <p class="">Adicionarei o mais breve possível!</p>
                 <a href="#" class="my-2">
                   <i class="fas fa-file-pdf text-lg"> Baixar PDF</i>
                 </a>
@@ -210,78 +209,78 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
           </section>
           <!-- Habilidades -->
           <section
-            class="bg-whiteprimary dark:bg-grayprimary text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+            class="relative mt-7 rounded-xl bg-whiteprimary p-11 text-zinc-800 shadow-md dark:bg-grayprimary"
           >
             <h2
-              class="bg-whiteprimary dark:bg-titlecard dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+              class="absolute -top-3.5 left-1/2 z-5 translate-x-50menos rounded-lg bg-whiteprimary py-1 px-2 text-sm opacity-75 shadow-sm dark:bg-titlecard dark:text-white md:left-[80px] md:translate-x-0 md:text-left"
             >
               Ferramentas front-end
             </h2>
 
             <ul
-              class="grid grid-row-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8"
+              class="grid-row-1 grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8"
             >
               <li
-                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-javascript-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  class="devicon-javascript-plain colored scale-125 text-6xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >javascript</span
                 >
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-typescript-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  class="devicon-react-original colored scale-125 text-6xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
-                  >typescript</span
+                  >react</span
                 >
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-html5-plain text-6xl text-red-600 scale-125 opacity-0 duration-1000"
+                  class="devicon-html5-plain scale-125 text-6xl text-red-600 opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >html 5</span
                 >
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-tailwindcss-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  class="devicon-tailwindcss-plain colored scale-125 text-6xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >tailwind css</span
                 >
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-sass-original colored text-6xl scale-125 opacity-0 duration-1000"
+                  class="devicon-sass-original colored scale-125 text-6xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >sass</span
                 >
@@ -291,78 +290,78 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
 
           <!-- Devtools -->
           <section
-            class="bg-whiteprimary dark:bg-grayprimary text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+            class="relative mt-7 rounded-xl bg-whiteprimary p-11 text-zinc-800 shadow-md dark:bg-grayprimary"
           >
             <h2
-              class="bg-whiteprimary dark:bg-titlecard dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+              class="absolute -top-3.5 left-1/2 z-5 translate-x-50menos rounded-lg bg-whiteprimary py-1 px-2 text-sm opacity-75 shadow-sm dark:bg-titlecard dark:text-white md:left-[80px] md:translate-x-0 md:text-left"
             >
               Ferramentas de desenvolvimento
             </h2>
 
             <ul
-              class="grid grid-row-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8"
+              class="grid-row-1 grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8"
             >
               <li
-                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-git-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  class="devicon-git-plain colored scale-125 text-6xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >git</span
                 >
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-github-original text-6xl scale-125 opacity-0 duration-1000"
+                  class="devicon-github-original scale-125 text-6xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >github</span
                 >
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-vscode-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  class="devicon-vscode-plain colored scale-125 text-6xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >vscode</span
                 >
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-npm-original-wordmark colored text-6xl scale-125 opacity-0 duration-1000"
+                  class="devicon-npm-original-wordmark colored scale-125 text-6xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >npm</span
                 >
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg dark:text-white py-4 rounded-lg shadow-sm flex flex-col items-center justify-centers hover:scale-105 duration-300"
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-chrome-plain colored text-6xl scale-125 opacity-0 duration-1000"
+                  class="devicon-chrome-plain colored scale-125 text-6xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
-                  class="mt-2.5 text-xs -translate-y-full opacity-0 duration-1000"
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >chrome devtools</span
                 >
@@ -373,156 +372,156 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
           <!-- Projetos -->
           <section
             id="projetos"
-            class="bg-whiteprimary dark:bg-grayprimary text-zinc-800 rounded-xl p-11 mt-7 relative shadow-md"
+            class="relative mt-7 rounded-xl bg-whiteprimary p-11 text-zinc-800 shadow-md dark:bg-grayprimary"
           >
             <h2
-              class="bg-whiteprimary dark:bg-titlecard dark:text-white text-sm absolute opacity-75 -top-3.5 shadow-sm z-5 py-1 px-2 rounded-lg translate-x-50menos left-1/2 md:translate-x-0 md:text-left md:left-[80px]"
+              class="absolute -top-3.5 left-1/2 z-5 translate-x-50menos rounded-lg bg-whiteprimary py-1 px-2 text-sm opacity-75 shadow-sm dark:bg-titlecard dark:text-white md:left-[80px] md:translate-x-0 md:text-left"
             >
               Projetos
             </h2>
 
-            <ul class="grid grid-row-1 sm:grid-cols-2 gap-5 md:gap-10">
+            <ul class="grid-row-1 grid gap-5 sm:grid-cols-2 md:gap-10">
               <li
-                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="justify-centers flex scale-125 flex-col items-center rounded-lg bg-graybg text-zinc-800 opacity-0 shadow-md duration-1000 hover:scale-105 dark:bg-graydarkbg dark:text-white"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-1.png"
                   alt="projeto-1"
-                  class="w-full h-full rounded-t-lg"
+                  class="h-full w-full rounded-t-lg"
                 />
                 <div
-                  class="flex flex-wrap justify-center items-center space-x-4 my-2"
+                  class="my-2 flex flex-wrap items-center justify-center space-x-4"
                 >
-                  <span class="bg-sky-600 rounded-lg px-2">html</span>
-                  <span class="bg-sky-600 rounded-lg px-2">tailwind</span>
-                  <span class="bg-sky-600 rounded-lg px-2 mt-1">alpinejs</span>
+                  <span class="rounded-lg bg-sky-600 px-2">html</span>
+                  <span class="rounded-lg bg-sky-600 px-2">tailwind</span>
+                  <span class="mt-1 rounded-lg bg-sky-600 px-2">alpinejs</span>
                 </div>
 
                 <a
                   href="https://github.com/metaclep/dark-mode-animacoes-com-tailwindcss-alpinejs"
                   target="_blank"
-                  class="flex flex-col justify-center items-center mt-1.5"
+                  class="mt-1.5 flex flex-col items-center justify-center"
                 >
                   <i class="devicon-github-original text-4xl"></i>
                   <span class="font-semibold">Source</span>
                 </a>
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="justify-centers flex scale-125 flex-col items-center rounded-lg bg-graybg text-zinc-800 opacity-0 shadow-md duration-1000 hover:scale-105 dark:bg-graydarkbg dark:text-white"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-2.png"
                   alt="projeto-2"
-                  class="w-full h-full rounded-t-lg"
+                  class="h-full w-full rounded-t-lg"
                 />
                 <div
-                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                  class="my-2 flex flex-row items-center justify-center space-x-4"
                 >
-                  <span class="bg-sky-600 rounded-lg px-2">html</span>
-                  <span class="bg-sky-600 rounded-lg px-2">tailwind</span>
+                  <span class="rounded-lg bg-sky-600 px-2">html</span>
+                  <span class="rounded-lg bg-sky-600 px-2">tailwind</span>
                 </div>
                 <a
                   href="https://github.com/metaclep/spotify-clone-com-tailwindcss"
                   target="_blank"
-                  class="flex flex-col justify-center items-center mt-1.5"
+                  class="mt-1.5 flex flex-col items-center justify-center"
                 >
                   <i class="devicon-github-original text-4xl"></i>
                   <span class="font-semibold">Source</span>
                 </a>
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="justify-centers flex scale-125 flex-col items-center rounded-lg bg-graybg text-zinc-800 opacity-0 shadow-md duration-1000 hover:scale-105 dark:bg-graydarkbg dark:text-white"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-3.png"
                   alt="projeto-2"
-                  class="w-full h-full rounded-t-lg"
+                  class="h-full w-full rounded-t-lg"
                 />
                 <div
-                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                  class="my-2 flex flex-row items-center justify-center space-x-4"
                 >
-                  <span class="bg-sky-600 rounded-lg px-2">html</span>
-                  <span class="bg-sky-600 rounded-lg px-2">tailwind</span>
+                  <span class="rounded-lg bg-sky-600 px-2">html</span>
+                  <span class="rounded-lg bg-sky-600 px-2">tailwind</span>
                 </div>
                 <a
                   href="https://github.com/metaclep/facebook-login-clone-tailwindcss"
                   target="_blank"
-                  class="flex flex-col justify-center items-center mt-1.5"
+                  class="mt-1.5 flex flex-col items-center justify-center"
                 >
                   <i class="devicon-github-original text-4xl"></i>
                   <span class="font-semibold">Source</span>
                 </a>
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="justify-centers flex scale-125 flex-col items-center rounded-lg bg-graybg text-zinc-800 opacity-0 shadow-md duration-1000 hover:scale-105 dark:bg-graydarkbg dark:text-white"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-4.png"
                   alt="projeto-2"
-                  class="w-full h-full rounded-t-lg"
+                  class="h-full w-full rounded-t-lg"
                 />
                 <div
-                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                  class="my-2 flex flex-row items-center justify-center space-x-4"
                 >
-                  <span class="bg-sky-600 rounded-lg px-2">html</span>
-                  <span class="bg-sky-600 rounded-lg px-2">tailwind</span>
+                  <span class="rounded-lg bg-sky-600 px-2">html</span>
+                  <span class="rounded-lg bg-sky-600 px-2">tailwind</span>
                 </div>
                 <a
                   href="https://github.com/metaclep/amazon-home-clone-tailwind-css"
                   target="_blank"
-                  class="flex flex-col justify-center items-center mt-1.5"
+                  class="mt-1.5 flex flex-col items-center justify-center"
                 >
                   <i class="devicon-github-original text-4xl"></i>
                   <span class="font-semibold">Source</span>
                 </a>
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="justify-centers flex scale-125 flex-col items-center rounded-lg bg-graybg text-zinc-800 opacity-0 shadow-md duration-1000 hover:scale-105 dark:bg-graydarkbg dark:text-white"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-5.png"
                   alt="projeto-2"
-                  class="w-full h-full rounded-t-lg"
+                  class="h-full w-full rounded-t-lg"
                 />
                 <div
-                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                  class="my-2 flex flex-row items-center justify-center space-x-4"
                 >
-                  <span class="bg-sky-600 rounded-lg px-2">html</span>
-                  <span class="bg-sky-600 rounded-lg px-2">css</span>
+                  <span class="rounded-lg bg-sky-600 px-2">html</span>
+                  <span class="rounded-lg bg-sky-600 px-2">css</span>
                 </div>
                 <a
                   href="https://github.com/metaclep/netflix-home-clone"
                   target="_blank"
-                  class="flex flex-col justify-center items-center mt-1.5"
+                  class="mt-1.5 flex flex-col items-center justify-center"
                 >
                   <i class="devicon-github-original text-4xl"></i>
                   <span class="font-semibold">Source</span>
                 </a>
               </li>
               <li
-                class="bg-graybg dark:bg-graydarkbg text-zinc-800 dark:text-white rounded-lg shadow-md flex flex-col items-center justify-centers hover:scale-105 scale-125 opacity-0 duration-1000"
+                class="justify-centers flex scale-125 flex-col items-center rounded-lg bg-graybg text-zinc-800 opacity-0 shadow-md duration-1000 hover:scale-105 dark:bg-graydarkbg dark:text-white"
                 x-intersect="$el.classList.add('scale-100', 'opacity-100')"
               >
                 <img
                   src="img/projeto-6.png"
                   alt="projeto-2"
-                  class="w-full h-full rounded-t-lg"
+                  class="h-full w-full rounded-t-lg"
                 />
                 <div
-                  class="flex flex-row justify-center items-center space-x-4 my-2"
+                  class="my-2 flex flex-row items-center justify-center space-x-4"
                 >
-                  <span class="bg-sky-600 rounded-lg px-2">html</span>
-                  <span class="bg-sky-600 rounded-lg px-2">css mobile</span>
+                  <span class="rounded-lg bg-sky-600 px-2">html</span>
+                  <span class="rounded-lg bg-sky-600 px-2">css mobile</span>
                 </div>
                 <a
                   href="https://github.com/metaclep/tinder-clone"
                   target="_blank"
-                  class="flex flex-col justify-center items-center mt-1.5"
+                  class="mt-1.5 flex flex-col items-center justify-center"
                 >
                   <i class="devicon-github-original text-4xl"></i>
                   <span class="font-semibold">Source</span>
@@ -533,23 +532,23 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
 
           <!-- Footer -->
           <footer
-            class="flex flex-col items-center justify-center bg-whiteprimary dark:bg-grayprimary rounded-xl py-4 px-4 mb-0 mt-7 relative shadow-md"
+            class="relative mb-0 mt-7 flex flex-col items-center justify-center rounded-xl bg-whiteprimary py-4 px-4 shadow-md dark:bg-grayprimary"
           >
             <h1
-              class="hidden sm:block text-zinc-800 dark:text-white text-md tracking-tighter font-extralight -translate-y-full opacity-0 duration-1000"
+              class="text-md hidden -translate-y-full font-extralight tracking-tighter text-zinc-800 opacity-0 duration-1000 dark:text-white sm:block"
               x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
             >
               Criado por Aldo Barbosa.
             </h1>
 
             <div
-              class="sm:hidden flex items-center justify-center -translate-y-full opacity-0 duration-1000"
+              class="flex -translate-y-full items-center justify-center opacity-0 duration-1000 sm:hidden"
               x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
             >
-              <span class="text-2xl flex text-gray-600">
+              <span class="flex text-2xl text-gray-600">
                 <a href="https://github.com/metaclep" target="_blank" class="">
                   <i
-                    class="fab fa-github dark:text-white hover:scale-125 duration-300 mr-5"
+                    class="fab fa-github mr-5 duration-300 hover:scale-125 dark:text-white"
                   ></i>
                 </a>
                 <a
@@ -558,12 +557,12 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                   class=""
                 >
                   <i
-                    class="fab fa-linkedin-in dark:text-white hover:scale-125 duration-300 mr-5"
+                    class="fab fa-linkedin-in mr-5 duration-300 hover:scale-125 dark:text-white"
                   ></i>
                 </a>
                 <a href="#" target="_blank" class="">
                   <i
-                    class="fab fa-instagram dark:text-white hover:scale-125 duration-300 mr-5"
+                    class="fab fa-instagram mr-5 duration-300 hover:scale-125 dark:text-white"
                   ></i>
                 </a>
                 <a
@@ -572,7 +571,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                   class=""
                 >
                   <i
-                    class="fab fa-facebook dark:text-white hover:scale-125 duration-300"
+                    class="fab fa-facebook duration-300 hover:scale-125 dark:text-white"
                   ></i>
                 </a>
               </span>
