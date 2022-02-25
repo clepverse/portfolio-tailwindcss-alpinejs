@@ -165,16 +165,18 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 class="z-5 -translate-y-full text-zinc-700 opacity-0 duration-1000 dark:text-white"
                 x-intersect="$el.classList.add('opacity-100', '-translate-y-0')"
               >
-                <span class="font-extralight">Oi, meu nome é</span>
+                <span class="font-extralight">Olá, meu nome é</span>
                 <h1 class="text-4xl font-bold">Aldo Barbosa</h1>
                 <p class="mt-2.5 font-light leading-5 tracking-tighter">
                   Sou estudante do curso de ciências da computação no estado de
                   Pernambuco. Sou desenvolvedor web em busca do fullstack.
                   Atualmente, tenho conhecimento em varias tecnologias,
-                  linguages de programação e frameworks, especialmente HTML
-                  semâtico, CSS, Sass, Tailwind CSS, JavaScript, AlpineJS,
-                  ReactJS e NextJS. Estou estudando Typescript, Redux e em breve
-                  entrarei nas tecnologias back-end.
+                  linguages de programação e frameworks, especialmente HTML,
+                  CSS, Sass, Styled components, Tailwind CSS, JavaScript,
+                  TypeScript, AlpineJS, ReactJS e NextJS. Atualmente estou
+                  aprimorando minhas habilidades em TypeScript e API Context no
+                  React, e aprendendo a utilizar CMS Headless, e logo mais
+                  estarei nas tecnologias back-end.
                 </p>
                 <div class="mt-7 flex justify-center md:justify-start">
                   <a
@@ -244,6 +246,19 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
+                  class="devicon-typescript-plain colored scale-125 text-6xl opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >typescript</span
+                >
+              </li>
+              <li
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
+              >
+                <i
                   class="devicon-react-original colored scale-125 text-6xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
@@ -264,19 +279,6 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                   class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >nextjs</span
-                >
-              </li>
-              <li
-                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
-              >
-                <i
-                  class="devicon-html5-plain scale-125 text-6xl text-red-600 opacity-0 duration-1000"
-                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
-                ></i>
-                <span
-                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
-                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
-                  >html 5</span
                 >
               </li>
               <li
@@ -364,13 +366,39 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                 class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
               >
                 <i
-                  class="devicon-npm-original-wordmark colored scale-125 text-6xl opacity-0 duration-1000"
+                  class="devicon-npm-original-wordmark colored scale-125 text-7xl opacity-0 duration-1000"
                   x-intersect="$el.classList.add('scale-100', 'opacity-100')"
                 ></i>
                 <span
                   class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
                   x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
                   >npm</span
+                >
+              </li>
+              <li
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
+              >
+                <i
+                  class="devicon-yarn-plain colored scale-125 text-6xl opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >yarn</span
+                >
+              </li>
+              <li
+                class="justify-centers flex flex-col items-center rounded-lg bg-graybg py-4 shadow-sm duration-300 hover:scale-105 dark:bg-graydarkbg dark:text-white"
+              >
+                <i
+                  class="devicon-figma-plain colored scale-125 text-6xl opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('scale-100', 'opacity-100')"
+                ></i>
+                <span
+                  class="mt-2.5 -translate-y-full text-xs opacity-0 duration-1000"
+                  x-intersect="$el.classList.add('-translate-y-0', 'opacity-100')"
+                  >figma</span
                 >
               </li>
               <li
