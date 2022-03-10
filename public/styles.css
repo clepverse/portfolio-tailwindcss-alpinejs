@@ -1153,11 +1153,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
-.mx-10{
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
 .mt-0{
   margin-top: 0px;
 }
@@ -1182,12 +1177,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.5rem;
 }
 
-.mt-1{
-  margin-top: 0.25rem;
-}
-
 .mt-1\.5{
   margin-top: 0.375rem;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
 }
 
 .mb-0{
@@ -1369,10 +1364,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.25rem;
 }
 
-.gap-10{
-  gap: 2.5rem;
-}
-
 .gap-14{
   gap: 3.5rem;
 }
@@ -1471,11 +1462,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 
 .text-center{
